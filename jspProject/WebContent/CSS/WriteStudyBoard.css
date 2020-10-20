@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+body{
+   margin: 0;
+   width :1300px;
+   padding  : 0;
+   /* 드래그 불가 */
+   -ms-user-select: none; 
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   user-select: none;
+}
+.wrap{
+   margin-right :0px;
+   padding-right :0px;
+   width : 100%;
+}
+/* ---------------------  네비바 스타일 --------------------- */
+
+.app-header {
+   position: fixed; /* 스크롤을 움직여도 고정 */
+   z-index: 600; /* 다른 태그들보다 위로 올린다. */
+   top: 0;
+   left: 0;
+   right: 0;
+   display: flex; /* 로고 와 메뉴바 위치를 잡아주는 태그 */
+   justify-content: space-between; /* 로고와 메뉴바 위치를 양 끝으로 옮겨줌 */
+   background: #ffffff; /* 배경 색상 */
+   /* margin-bottom: 30px; */
+   border-bottom: 1px solid #e0e0e0;
+   padding-left: 50px;
+   margin-right: 0px;
+   max-width: 100%;
+   max-height: 72px;
+}
+
+.brand {
+   /*margin을 사용하여 왼쪽 상단에 고정*/
+   margin-top: 0;
+   margin-bottom: 0;
+  
+}
+
+.brand a {
+   display: block; /* 블록박스형태로 보이기 */
+   width: 200px; /* 폭 */
+   height: 15px;  /* 넓이 */
+   padding: 26px; /* 내부여백 */
+   margin-top : 1px;
+   background: url("../images/moblelogo.jpg") no-repeat center;
+   /*../moblelogo.jpg 사진을 폴더에서 불러옴/ no-repeat center : 로고를 하나만 보이게  */
+   background-size: 120px 50px; /* 로고 사이즈 */
+}
+
+.button {
+   cursor: pointer;
+   border: none;
+   width: 66px;
+   height: 70px;    
+}
+  
+.logo-name {
+   overflow: hidden;
+   position: absolute !important;
+   top: -9999em;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+}
+
+/* ---------------------  메뉴 스타일 --------------------- */
+
+.app-header .nav-item {
+   list-style: none;
+   float:left;
+   position: relative; 
+   margin: 5px 20px;
+   padding:0;
+}
+
+ ul.nav {
+   width : 1300px;
+   min-width : 660px;
+   min-height: 38px;
+} 
+
+/* 네비게이션의 큰 리스트 */
+.nav .nav-item .nav-link {   
+   display: block;  /* 메뉴칸 블록 레벨 */
+   font-weight: bold; 
+   font-size: 17px;
+   padding: 5px ;
+   margin: 0;
+   min-width: 80px;
+   color: #343a40;
+   text-decoration: none;  /* 글자 밑줄 없애기 */
+   transform: scale(1.00);
+   transition: all 0.05s ease;
+}
+
+/* ---  리스트에 마우스 올릴 경우 효과 --- */
+.nav .nav-item:hover > .nav-link{
+   text-decoration: underline; 
+   transform: scale(1.1);
+   margin: 0;
+   padding: 5px;
+
+}
+
+/* --- 버튼 디자인 --- */
+.app-header .button.is-open {
+   user-select: none; /* 텍스트를 선택하지 못하게함 */
+   padding: 20px; /* 내부여백 20px */
+   background: #ffffff;
+   transition: all 0.3s ease; /* 버튼 클릭후 0.3초뒤이동 */
+}
+
+
+
+/* --------------------- Main 부분 디자인 --------------------- */
+
+main {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;    /* 렌더링 엔진에 텍스트 렌더링시 최적화 할 정보를 제공 */
+    color: initial;         /* 컬러를 기본값으로 설정(브라우저마다 다르므로) */
+    letter-spacing: normal; /* 글자 사이 간격 지정 */
+    word-spacing: normal;   /* 단어 사이 간격 */
+    text-transform: none;  /* 대문자로 또는 소문자로 변경 but none으로 인해 html 그대로 읽음 */
+    text-indent: 0px;       /* 들여쓰기, 내여쓰기 기본값 지정 */
+    text-shadow: none;      /* 텍스트 그림자 기본값 지정 */
+    display: inline-block; /* float 속성을 적용한 것처럼 옆으로 늘어서 있게됨(컨텐츠만큼 영역이 잡힘) */
+    text-align: start;      /* 문장의 마지막 텍스트 정렬 시작 값을 설정 */
+    -webkit-appearance: textfield;
+    background-color: white; /* 색상 초기화 */
+    -webkit-rtl-ordering: logical;
+    cursor: text;   /* 마우스 커서를 | 모양으로 바꿔줌 */
+    margin: 0em;
+    font: 400 13.3333px Arial;   /* 크롬의 기본 글꼴 크기 */
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+/* ------- <<<<< 타이틀 만들기 >>>>> ------- */
+.boardtitle{
+   position: absolute;
+    top: 13%;
+    width : 100%;
+    height : 130px;
+    background-color : #4682B4;
+      border: 2px solid #708090; 
+}
+
+p.boardfont{
+   font-weight: bold; 
+   font-size: 50px;
+   color : #ffffff;
+   text-align: center;
+   padding: 5px;
+   margin : 15px;
+}
+
+/* ------- <<<<< 입력부분 만들기 >>>>> ------- */
+
+.writeFreeBoard-main{
+   position: absolute;
+   width : auto;
+    left: 42%;
+    top: 48%;
+   margin: -145px 0 0 -160px;
+}
+
+/* --- 입력 부분 디자인 --- */
+.box_FreeWrite{
+   padding: 5px;
+   margin:10px;
+   border-radius: 5px; 
+   border: 2px solid #708090; 
+}
+
+
+/* --- 제목 라벨 border 디자인 --- */
+.boderTitle{
+   width: 50px;
+   padding-left: 15px;
+   padding-right: 15px;
+   border-right: 1.5px solid #708090;
+}
+
+/* --- 이름 라벨 border 디자인 --- */
+.boderName{
+   width: 50px;
+   padding-left: 15px;
+   padding-right: 15px;
+   border-right: 1.5px solid #708090;
+}
+
+.inp_Title {
+   border-bottom : 1.5px solid #708090;
+}
+
+.inp_Name {
+   padding-top : 5px; 
+}
+
+/* --- 제목, 이름 입력 디자인 --- */
+
+#writeTitle , #writeName{
+   font-size: 15px;
+   margin : 3px 15px 5px;
+   width : 450px;
+}
+
+#writeContent{
+   margin-top: 10px;
+   min-width: 600px;
+   min-height : 500px;
+   max-width: 600px;
+   max-height: 500px;
+   font-size: 20px;
+}
+
+.box_FreeWrite{
+   border-radius: 5px; 
+   border: 2px solid #708090; 
+}
+
+/* --- 글 작성(submit) 버튼 디자인 --- */
+
+.fieldset_three{
+   display: block;
+   width: 100%;
+   height: 100%;
+   padding-left : 10px;
+   padding-right : 10px;
+}
+
+.fieldset_three .btn_Write{
+   margin-top : 0px;
+   margin-left : 66%;
+   padding : 8px 15px;
+   background-color: #708090;
+   font-size: 15px; 
+   color: #ffffff; 
+   border-radius: 5px; 
+   border: 2px solid #708090; 
+}
+
+.fieldset_three .btn_Back{
+   margin-top : 0px;
+   margin-left : 2%;
+   padding : 8px 15px;
+   background-color: #708090;
+   font-size: 15px; 
+   color: #ffffff; 
+   border-radius: 5px; 
+   border: 2px solid #708090; 
+}
+
+
+/* --- 하단 부분 디자인 --- */
+.boxColor{
+   display: inline-block;
+   background: #708090;   
+   width: 2500px;
+   height: 200px;
+   margin-top : 80%;
+}
+
+
+
+
+
+
+

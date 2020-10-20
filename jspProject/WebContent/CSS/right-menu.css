@@ -1,0 +1,42 @@
+.right-menubar {
+  position: absolute;
+  right:-11rem;
+  top: 4.5rem;
+  height: 15rem;
+  width: 10rem;
+  background-color: white;
+  display: block;
+  transition: 0.4s;
+  border: 1px solid #333;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-right:0;
+}
+.logout-list{
+  list-style: none;
+}
+.logout-link{
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+.logout-link:before{
+  margin-right: 1rem;
+  content: "➥";
+  color: dodgerblue;
+}
+
+.logout-link:hover{
+  color:dodgerblue;
+}
+.hidden{
+  position: absolute;
+  right:-12rem;
+  top: 4.5rem;
+  height: 15.5rem;
+  width: 12rem;
+  background-color: white;
+  display: block;
+  z-index: 10;
+}

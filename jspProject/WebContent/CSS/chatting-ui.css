@@ -1,0 +1,88 @@
+.chatting-container{
+  position:fixed;
+  top:170px;
+  right:0;
+  bottom:0;
+  left:0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.chatting-box{
+  width: 70vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chatting-input-container{
+  display: flex;
+
+}
+.chatting-textarea{
+  width:80%;
+  height:80%;
+  min-width:400px;
+  border:0;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.chatting-content{
+  border:0;
+  font-size: 1.5rem;
+  flex: 1 1 auto;
+  margin-right: 1rem;
+  border-radius: 0.2rem;
+}
+.chatting-content:hover{
+  background-color: rgb(203, 227, 252);
+  border: 0.5px solid dodgerblue;
+}
+.chatting-submit{
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 0.2rem;
+  background-color: rgb(203, 227, 252);
+  width:4rem;
+  height: 2rem;
+  transition: 0.3s;
+  margin-right: 1rem;
+}
+.chatting-submit:hover{
+  border: 0.5px solid dodgerblue;
+}
+.chatting-exit{
+  flex-shrink: 0;
+  background-color: rgb(203, 227, 252);
+  border-radius: 0.2rem;
+  border: 0;
+  width:4rem;
+  height: 2rem;
+  transition: 0.3s;
+}
+.chatting-exit:hover{
+  border: 0.5px solid dodgerblue;
+}
+
+
+
+.user-count
+{
+  border:0;
+  font-size: 1rem;
+  flex: 1 1 auto;
+  margin-right: 1rem;
+  border-radius: 0.2rem;
+	
+}
+.chatting-footer{
+  position: absolute;
+  bottom:0;
+  width:100%;
+  padding: 2rem;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border-top: 1px solid lightgray;
+}

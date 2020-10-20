@@ -1,0 +1,336 @@
+@charset "UTF-8";
+
+body{
+	margin: 0;
+	width :1300px;
+	padding  : 0;
+	/* 드래그 불가 */
+	-ms-user-select: none; 
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.wrap{
+	margin-right :0px;
+	padding-right :0px;
+	width : 100%;
+}
+/* ---------------------  네비바 스타일 --------------------- */
+
+.app-header {
+	position: fixed; /* 스크롤을 움직여도 고정 */
+	z-index: 600; /* 다른 태그들보다 위로 올린다. */
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex; /* 로고 와 메뉴바 위치를 잡아주는 태그 */
+	justify-content: space-between; /* 로고와 메뉴바 위치를 양 끝으로 옮겨줌 */
+	background: #ffffff; /* 배경 색상 */
+	/* margin-bottom: 30px; */
+	border-bottom: 1px solid #e0e0e0;
+	padding-left: 50px;
+	margin-right: 0px;
+	max-width: 100%;
+	max-height: 72px;
+}
+
+.brand {
+	/*margin을 사용하여 왼쪽 상단에 고정*/
+	margin-top: 0;
+	margin-bottom: 0;
+  
+}
+
+.brand a {
+	display: block; /* 블록박스형태로 보이기 */
+	width: 200px; /* 폭 */
+	height: 15px;  /* 넓이 */
+	padding: 26px; /* 내부여백 */
+	margin-top : 1px;
+	background: url("../images/moblelogo.jpg") no-repeat center;
+	/*../moblelogo.jpg 사진을 폴더에서 불러옴/ no-repeat center : 로고를 하나만 보이게  */
+	background-size: 120px 50px; /* 로고 사이즈 */
+}
+
+.button {
+	cursor: pointer;
+	border: none;
+	width: 66px;
+	height: 70px;    
+}
+  
+.logo-name {
+	overflow: hidden;
+	position: absolute !important;
+	top: -9999em;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+/* ---------------------  메뉴 스타일 --------------------- */
+
+.app-header .nav-item {
+	list-style: none;
+	float:left;
+	position: relative; 
+	margin: 5px 20px;
+	padding:0;
+}
+
+ ul.nav {
+	width : 1300px;
+	min-width : 660px;
+	min-height: 38px;
+} 
+
+/* 네비게이션의 큰 리스트 */
+.nav .nav-item .nav-link {   
+	display: block;  /* 메뉴칸 블록 레벨 */
+	font-weight: bold; 
+	font-size: 17px;
+	padding: 5px ;
+	margin: 0;
+	min-width: 80px;
+	color: #343a40;
+	text-decoration: none;  /* 글자 밑줄 없애기 */
+	transform: scale(1.00);
+	transition: all 0.05s ease;
+}
+
+/* ---  리스트에 마우스 올릴 경우 효과 --- */
+.nav .nav-item:hover > .nav-link{
+	text-decoration: underline; 
+	transform: scale(1.1);
+	margin: 0;
+	padding: 5px;
+
+}
+
+/* --- 버튼 디자인 --- */
+.app-header .button.is-open {
+	user-select: none; /* 텍스트를 선택하지 못하게함 */
+	padding: 20px; /* 내부여백 20px */
+	background: #ffffff;
+	transition: all 0.3s ease; /* 버튼 클릭후 0.3초뒤이동 */
+}
+
+
+
+/* --------------------- Main 부분 디자인 --------------------- */
+
+body, button, input, select, td, textarea, th {
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased; /* 브라우저마다 글자 다르게 보이지않게 함 */
+}
+
+/* ------- 타이틀 ------- */
+.boardtitle{
+	position: absolute;
+    top: 13%;
+    width : 100%;
+    height : 130px;
+    background-color : #4682B4;
+   	border: 2px solid #708090; 
+}
+
+p.boardfont{
+	font-weight: bold; 
+	font-size: 50px;
+	color : #ffffff;
+	text-align: center;
+	padding: 5px;
+	margin : 15px;
+}
+/* ------- 검색 기능 디자인 ------- */
+
+/* 중앙으로 정렬하고 시작 */
+.container_board{
+	position: absolute;
+    left: 36%;
+    top: 51%;
+    margin: -145px 0 0 -160px;
+    padding : 5px 10px;
+    border-radius: 5px; 
+	border: 2px solid #708090; 
+}
+
+
+/* ------- 게시판 메인 디자인 ------- */
+.table_board {
+	border-collapse : collapse;
+	border-bottom: 1px solid #dddddd;
+}
+.table_board tbody th {
+	border-bottom: 1px solid #dddddd;
+}
+
+
+
+/* ------- 게시판 칼럼 디자인 ------- */
+
+.tableCulrom1{
+	padding : 5px 15px;
+	background : #4682B4;
+	color : #ffffff;
+    font-size : 14px;
+}
+.tableCulrom2{
+	padding : 5px 70px;
+	background : #4682B4;
+	color : #ffffff;
+    font-size : 14px;
+}
+
+/* ------- 게시판 내용 출력 디자인 ------- */
+
+.tableContent1{
+	padding : 7px 20px;
+	background : #ffffff;
+	color : #000000;
+	font-size : 14px;
+	text-align : left;
+	max-width: 55px;
+	max-height: 100px;
+	min-width: 55px;
+	min-height: 100x;
+	border-bottom: 1px solid #dddddd;
+	
+}
+
+.tableContent2{
+	padding : 0px 10px ;
+	background : #ffffff;
+	color : #000000;
+	font-size : 14px;
+	text-align : left;
+	max-width: 300px;
+	max-height: 52px;
+	min-width: 300px;
+	min-height: 52px;
+	border-bottom: 1px solid #dddddd;
+}
+
+.tableContent4{
+	padding : 7px 5px;
+	text-align : center;
+	background : #ffffff;
+	color : #000000;
+	font-size : 14px;
+	max-width: 95px;
+	max-height: 100px;
+	min-width: 95px;
+	min-height: 100px;
+	border-bottom: 1px solid #dddddd;
+}
+
+.tableContent5{
+	padding : 7px 5px;
+	text-align : center;
+	background : #ffffff;
+	color : #000000;
+	font-size : 14px;
+	max-width: 300px;
+	max-height: 100px;
+	min-width: 300px;
+	min-height: 100px;
+	border-bottom: 1px solid #dddddd;
+}
+
+
+/* ------- 게시판 버튼 디자인  ------- */
+
+.post_button{
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-left : 5px;
+	padding-right : 5px;
+}
+
+.post_button .btn-back{
+	margin-top : 15px;
+	margin-left : 70%;
+	background-color: #708090; 
+	color: #ffffff;
+	padding: 5px;
+	border: none;
+	border-radius: 5px; 
+	border: 2px solid #708090; 
+}
+
+.post_button .btn-delete{
+	margin-top : 15px;
+	margin-left : 1%;
+	background-color: #708090; 
+	color: #ffffff; 
+	padding: 5px;
+	border: none;
+	border-radius: 5px; 
+	border: 2px solid #708090; 
+}
+
+.post_button .btn-write{
+	margin-top : 15px;
+	margin-left : 1%;
+	background-color: #708090; 
+	color: #ffffff; 
+	padding: 5px;
+	border: none;
+	border-radius: 5px; 
+	border: 2px solid #708090; 
+}
+
+
+/* ------- 게시판 목록 디자인------- */
+
+.Num_board{
+	position: relative; 
+	width: 100%;
+	height: 100%;
+}
+
+.ul_board{
+	list-style: none;
+	padding:0;
+	margin-left : 45%;
+}
+
+.ul_board li{
+	display: block;  /* 메뉴칸 블록 레벨 */
+	font-weight: bold; 
+	float : left;
+	margin-top : 10px;
+	margin-left : 10px;
+}
+.ul_board li a{
+	text-decoration: none;
+	color: #708090;
+
+}
+
+/* --- 하단 부분 디자인 --- */
+
+.boxColor{
+	display: inline-block;
+	background: #708090;	
+	width: 2000px;
+	height: 200px;
+	margin-top : 65%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
